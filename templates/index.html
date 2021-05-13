@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SaathiTimro</title>
+	{% load static %}
+	<link rel = "icon" href = "{% static 'img/blood-drop.svg' %}" type = "image/x-icon">
+	<!-- css -->
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<!-- Js -->
+	<script type="text/javascript" src="main.js">
+	</script>
+	<!-- icons -->
+	<script src="https://kit.fontawesome.com/7f9e9439f9.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+
+<body onload="showContent(event, 'home')">
+
+
+header and navigation bar
+
+<header>
+	<ul class="custom-header-ul">
+		<li>*bisadhgedey@gmail.com*</li>
+		<li>*contactinfo:98216354685*</li>
+	</ul>
+</header>
+
+
+<nav>
+	<!-- <img src="#" alternate="Logo"> -->
+	<a class="tablinks" href="index.html"><img class="custom-logo" src="{% static 'img/logo.png' %}" alt="Logo Here"></a>
+	<div class="custom-nav-ul">
+		<a class="tablinks" href="donor"><i class="fas fa-hands-helping fa-lg"></i> Become Donor</a>
+		<a class="tablinks" href="liverequest"><i class="fas fa-heartbeat fa-lg"></i> Live Requests</a>
+		<a class="tablinks" href="request"><i class="fas fa-hand-holding-water fa-lg"></i> Request Plasma</a>
+		<a class="tablinks" href=""><i class="fas fa-info fa-lg" style="margin-right: 6px;">
+		</i>  About Us </a>
+	</div>
+</nav>
+
+
+<!-- content of the page -->
+<section class="page-content">
+
+	<div class="tabcontent" id="home">
+
+		<div id="first-info">
+			<img src="{% static 'img/work together.jpg'%}" placeholder="background">
+			<div id="overlay-screen">
+				<h1>Saathitimro</h1>
+				<span>
+					<a href="donor">Become Donor</a>
+					<a href="request">Request Plasma</a>
+			</span>
+			</div>
+		</div>
+
+		<div id="second-info">
+			<h2 style="text-align: center;"> Our Services </h2>
+			<span><i class="fas fa-heartbeat fa-2x"></i> 111 Request </span>
+			<span><i class="fas fa-hands-helping fa-2x"></i> 111 Donor </span>
+			<span><i class="fas fa-address-book fa-2x"></i> Contact Us </span>
+		</div>
+
+		<div id="third-info">
+			<img src="{% static 'img/helpother.jpg'%}">
+		</div>
+
+	</div>
+
+</section>
+
+</body>
+</html>
