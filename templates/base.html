@@ -20,6 +20,35 @@
 </head>
 
 <body>
+
+<!--  notification message here -->
+{% if message %}
+<div class="alert">
+	<button class="fas fa-times" id ="close-pointer" onclick="closeMessage()"></button>
+
+	if condition here for determining message type
+
+			{% if message.sucess %}
+
+			<p class="alert-sucess"> Sucess Notifications here</p>
+
+			{% endif %}
+
+			{% if message.fail %}
+
+			<p class="alert-fail"> Fail Notifications here </p>
+
+			{% endif %}
+
+			{% if message.warn %}
+
+			<p class="alert-warn">Warning Notifications here </p>
+
+			{% endif %}
+
+</div> -->
+{% endif %}
+
 <!--navbar header-->
 {% include 'partials/navbar.html' %}
 <!-- content of the page -->

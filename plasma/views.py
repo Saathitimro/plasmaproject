@@ -7,6 +7,13 @@ from .models import Donor, Blood
 def home(request):
     return render(request, "Pages/index.html")
 
+
+def liveRequest(request):
+    return render(request, "Pages/liverequest.html")
+
+def requestDonor(request):
+    return render(request, "Pages/requestdonor.html")
+
 # go to donor page
 def doner(request):
     return render(request, "Pages/donor.html")
