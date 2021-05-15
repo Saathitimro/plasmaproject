@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'title' %} LiveRequest {% endblock %}
+{% block 'content' %}
+	<div class="tabcontent" id="liveRequest">
+		<h1 style="text-align: center; margin: 3vh 0 3vh 0;">Live Request Here</h1>
+		<table class="request-table">
+			<tr>
+				<th>sn</th>
+				<th>Urgency</th>
+				<th>Name</th>
+				<th>Blood type</th>
+				<th>Address</th>
+				<th>Action</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td style="color: orange;">Moderate</td>
+				<td>Dummy</td>
+				<td>A+</td>
+				<td>Here</td>
+				<td><button class="help-button">Offer Help</button></td> <!-- this button should redirect to contacts -->
+			</tr>
+			<tr>
+				<td>2</td>
+				<td style="color:red;">Urgent</td>
+				<td>Dummy</td>
+				<td>A-</td>
+				<td>Here</td>
+				<td><button class="help-button">Offer Help</button></td> <!-- this button should redirect to contacts -->
+			</tr>
+		</table>
+	</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block 'title' %} Home {% endblock %}
+
+{% load static %}
+
+{% block 'content' %}
+<!-- content of the page -->
+
+	<div class="tabcontent" id="home">
+
+		<div id="first-info">
+			<img src="{% static 'img/work together.jpg'%}" placeholder="background">
+			<div id="overlay-screen">
+				<h1>Saathitimro</h1>
+				<span>
+					<a href="donor">Become Donor</a>
+					<a href="requestDonor">Request Plasma</a>
+			</span>
+			</div>
+		</div>
+
+		<div id="second-info">
+			<h2 style="text-align: center;"> Our Services </h2>
+			<span><i class="fas fa-heartbeat fa-2x"></i> 111 Request </span>
+			<span><i class="fas fa-hands-helping fa-2x"></i> 111 Donor </span>
+			<span><i class="fas fa-address-book fa-2x"></i> Contact Us </span>
+		</div>
+
+		<div id="third-info">
+			<img src="{% static 'img/helpother.jpg'%}">
+		</div>
+
+	</div>
+
+{% endblock %}
+

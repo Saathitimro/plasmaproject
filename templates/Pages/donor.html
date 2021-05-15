@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'title' %} Become a Donor {% endblock %}
+
+{% block 'content' %}
+	<!-- Plasma form here -->
+
+	<div class="tabcontent" id="volunteer">
+
+		<h1 style="text-align: center; margin-top: 3vh;">Become A Donor</h1>
+
+		<div class="terms-conditions">
+
+			<h3>Requirements to become a Plasma Donor</h3>
+
+			<ol class="terms-conditions-list" style="padding: 5px;">
+
+				<li>You must be tested COVID-19 positive in past </li>
+				<li>You must be fully recovered from the COVID-19 disease and not taking any antibiotics</li>
+				<li>You mustn't show any covid symptoms from past 14 days </li>
+				<li>Your age must be between 18 to 60</li>
+				<li>Your weight must be more than 50 kgs</li>
+				<li>You mustn't have donated blood or blood components including plasma in past 28 days </li>
+				<li>You must be in good health and feeling good at the time of donation</li>
+				<li>You must not have have any Sexually transmitted disease , Cancer , Hepatitis B or Hepatitis C </li>
+				<li>You will consult with doctor if you have diabeties or hyper tension</li>
+
+			</ol>
+
+				<div class="terms-form">
+					<div style="display: flex; flex-direction: row; justify-content:space-between; align-items: center;">
+						<label for="agree" style="margin:15px ; font-size: 18px; font-weight: bold;">Do you fall under these categories?</label>
+						<input type="checkbox" name="agree" onclick="displayButton()" required> <label style="margin:10px; font-size: 16px; font-weight: bold;  font-size: 16px;">Yes</label>
+					</div>
+					<button value="Agree" onclick="displayForm()" id="agreeButton">Proceed</button>
+				</div>
+		</div>
+	</div>
+</section>
+	<div id="screen">
+		<div id="donorform-container">
+			<form method="post" class="donor-form" enctype="multipart/form-data" action='donor_submit'>
+			{% csrf_token %}
+
+				<h2 style="margin: 3vh;"> Donor Information</h2>
+
+				<label for="donor-name">Name</label>
+				<input type="text" name="donor-name" placeholder="Name Here" required>
+
+				<label for="donor-contact">Contact Number</label>
+				<input type="number" id="donor-contact" name="donor-contact" minlength="10" maxlength="10"
+				 placeholder="Contact Number" required/>
+
+				<label for="donor-address">Address</label>
+				<select id="donor-address" name="donor-address" required>
+					<option value="Near Maharajgunj Kathmandu">Near Maharajgunj Kathmandu</option>
+					<option>Near Teku Kathmandu</option>
+					<option>Near Medicity hospital Kathmandu</option>
+					<option>Near Grandee hospital Kathmandu</option>
+					<option>Near HAMS hospital Kathmandu</option>
+					<option>Near Dharan</option>
+					<option>Near Kavre</option>
+					<option>Near Birgunj</option>
+					<option>Near Biratnagar</option>
+					<option>Near Jumla</option>
+					<option>Near Nepalganj</option>
+					<option>Near Dhangadhi</option>
+				</select>
+
+				<label for="blood-type">Blood type</label>
+				<select id="blood-type" name="blood-type" required>
+					<option value="A+">A+</option>
+					<option value="A-">A-</option>
+					<option value="B+">B+</option>
+					<option value="B-">B-</option>
+					<option value="O+">O+</option>
+					<option value="O-">O-</option>
+					<option value="AB+">AB+</option>
+					<option value="AB-">AB-</option>
+				</select>
+
+				<label for="vaccin">Are you Vaccinated?</label>
+				<span>
+				 Yes <input type="Radio" name="vaccin" value="True"> No <input type="Radio" name="vaccin" value="False">
+				</span>
+
+				<label for="">When did you suffer from Covid-19?</label>
+				<select name="recovered_time" required>
+					<option value="recently">Recently</option>
+					<option value="1">1 Month Ago</option>
+					<option value="2">2 Months Ago</option>
+					<option value="3">3-6 Months ago</option>
+				</select>
+
+				<label for="blood-req">Are you willing to donate blood in future?</label>
+				<span>
+				 Yes <input type="Radio" name="blood-req" value="True"> No <input type="Radio" name="blood-req" value="False">
+				</span>
+
+				<span> <input type="checkbox" name="agree" required><label for="agree"> I agree to the <a href="">Terms and Conditions</a></label> </span>
+
+				<input type="submit" name="submit" value="Register">
+
+			</form>
+		</div>
+		<button class="fas fa-times fa-lg" id="close-form"  style="color:black;" onclick="closeForm()"></button>
+	</div>
+{% endblock %}

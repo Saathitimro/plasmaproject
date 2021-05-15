@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block 'title' %} Request Donor {% endblock %}
+
+{% load static %}
+
+{% block 'content' %}
+
+	<div class="tabcontent" id="requestBlood">
+
+		<h1 style="text-align: center; margin-top: 3vh;">Request Plasma Here</h1>
+
+		<form class="request-form" action="#" method="POST">
+
+			<!-- {% csrf_token %} -->
+
+			<label for="patient-name">Name</label>
+			<input type="text" id="patient-name" id="patient-name" placeholder="Name" required>
+
+			<label for="patient-contact">Contact Number</label>
+			<input type="number" id="patient-contact" name="patient-contact" minlength="7" maxlength="10"
+			 placeholder="Contact Number" required/>
+
+			<label for="patient-address">Address</label>
+			<select id="patient-address" name="patient-address" required>
+				<option value="Near Maharajgunj Kathmandu">Near Maharajgunj Kathmandu</option>
+				<option>Near Teku Kathmandu</option>
+				<option>Near Medicity hospital Kathmandu</option>
+				<option>Near Grandee hospital Kathmandu</option>
+				<option>Near HAMS hospital Kathmandu</option>
+				<option>Near Dharan</option>
+				<option>Near Kavre</option>
+				<option>Near Birgunj</option>
+				<option>Near Biratnagar</option>
+				<option>Near Jumla</option>
+				<option>Near Nepalganj</option>
+				<option>Near Dhangadhi</option>
+			</select>
+
+			<label for="blood-type">Blood type</label>
+			<select id="blood-type" name="blood-type" required>
+				<option value="A+">A+</option>
+				<option value="A-">A-</option>
+				<option value="B+">B+</option>
+				<option value="B-">B-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+				<option value="AB+">AB+</option>
+				<option value="AB-">AB-</option>
+			</select>
+			<label for="urgency">Urgency</label>
+
+			<select id="urgency" name="urgency">
+				<option value="Urgent">Urgent</option>
+				<option value="Moderate">Moderate</option>
+			</select>
+
+			<input type="submit" name="submit" value="Request">
+
+		</form>
+	</div>
+
+{% endblock %}
