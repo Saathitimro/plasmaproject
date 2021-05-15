@@ -4,7 +4,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.home),
+    path('', views.home, name="home"),
+    path('home', views.home, name="home"),
     path('donor', views.doner),
     path('donor_submit', views.doner_submit),
 ]
