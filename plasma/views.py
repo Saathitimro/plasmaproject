@@ -36,4 +36,4 @@ def doner_submit(request):# save in database after doner registration
         return render(request,"index.html")
     add_donor = Donor(Name=name,Contact=contact,Address=address,Blood_type=blood_type,Vacinated=vaccin,Recovered=future_donation)
     add_donor.save()
-    return render(request,"index.html")
+    return render(request,"Pages/index.html")
